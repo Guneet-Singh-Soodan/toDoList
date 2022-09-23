@@ -8,8 +8,8 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
 app.use(express.static("public"));
 
-mongoose.connect('mongodb+srv://admin-guneet:Abcd1234@cluster0.2hz87.mongodb.net/todolistDB');
-
+mongoose.connect('mongodb+srv://admin-guneet:Abcd1234@cluster0.2hz87.mongodb.net/?retryWrites=true&w=majority');
+//'mongodb+srv://admin-guneet:Abcd1234@cluster0.2hz87.mongodb.net/todolistDB'
 const itemsSchema= {
   name: String
 };
